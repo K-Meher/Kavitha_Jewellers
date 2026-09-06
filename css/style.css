@@ -1,0 +1,572 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff3c4,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #f8e7b0,
+            transparent 30%
+        ),
+        #fffaf0;
+
+    color: #29231a;
+}
+
+
+/* HEADER */
+
+.site-header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf7,
+            #fff4c8
+        );
+
+    padding: 35px 8%;
+
+    border-bottom: 1px solid #ead9a5;
+
+    box-shadow:
+        0 5px 25px rgba(100, 70, 10, 0.08);
+}
+
+
+.site-header h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    color: #8a6410;
+
+    margin: 10px 0;
+}
+
+
+.site-header p {
+    color: #75684d;
+}
+
+
+.back-link {
+
+    color: #8a6410;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.back-link:hover {
+    color: #c39420;
+}
+
+
+/* COLLECTION */
+
+.collection-container {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    border: 1px solid #f0e5c4;
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.015);
+
+    box-shadow:
+        0 25px 50px
+        rgba(117, 84, 20, 0.18);
+}
+
+
+.product-image-container {
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: 300px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #f8efd6
+        );
+}
+
+
+.product-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.product-card:hover .product-image {
+
+    transform:
+        scale(1.08);
+}
+
+
+.view-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(60, 42, 10, 0.45);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transition: 0.4s;
+}
+
+
+.product-card:hover .view-overlay {
+
+    opacity: 1;
+}
+
+
+/* PRODUCT PAGE */
+
+.product-page {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+.product-detail {
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* 3D MODEL */
+
+.model-section {
+
+    min-height: 550px;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff,
+            #f5ead0
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(100, 70, 10, 0.15);
+
+    overflow: hidden;
+}
+
+
+model-viewer {
+
+    width: 100%;
+
+    height: 550px;
+
+    --poster-color: transparent;
+}
+
+
+/* INFORMATION */
+
+.product-information {
+
+    padding: 20px;
+}
+
+
+.gold-label {
+
+    color: #b8860b;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+.product-information h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3.5rem
+    );
+
+    color: #6d4d0c;
+
+    margin: 12px 0;
+}
+
+
+.description {
+
+    color: #6d6555;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+.information-box {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+
+.information-box div {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    border: 1px solid #ead9a5;
+}
+
+
+.information-box span {
+
+    display: block;
+
+    color: #81765f;
+
+    font-size: 13px;
+}
+
+
+.information-box strong {
+
+    display: block;
+
+    color: #6d4d0c;
+
+    margin-top: 5px;
+
+    font-size: 18px;
+}
+
+
+/* GOLD RATE */
+
+.gold-price-box {
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8d6814,
+            #c99d31
+        );
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px
+        rgba(139, 100, 15, 0.25);
+}
+
+
+.gold-price-box p {
+
+    margin: 0;
+
+    opacity: 0.8;
+}
+
+
+.gold-price-box h2 {
+
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+
+.gold-price-box span {
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+/* BUTTON */
+
+.back-button {
+
+    margin-top: 25px;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    background: #fff;
+
+    color: #76530c;
+
+    border: 1px solid #d5b45d;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+
+    background: #76530c;
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+    background: #fff;
+
+    border-top: 1px solid #ead9a5;
+
+    color: #81765f;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .product-detail {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .model-section,
+    model-viewer {
+
+        height: 400px;
+
+        min-height: 400px;
+    }
+
+}
+
+.gold-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #ead9a5;
+
+    transition: 0.3s;
+}
+
+
+.gold-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(120, 80, 10, 0.12);
+}
+
+
+.gold-card p {
+
+    color: #92701e;
+
+    font-weight: 600;
+}
+
+
+.gold-card h3 {
+
+    font-size: 30px;
+
+    color: #6d4d0c;
+
+    margin: 10px;
+}
+
+/* PRODUCT VISUAL SECTION */
+
+.visual-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* PRODUCT PHOTO */
+
+.product-photo-box {
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff,
+            #f8efd8
+        );
+
+    border-radius: 30px;
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px
+        rgba(100, 70, 10, 0.12);
+
+    border: 1px solid #ead9a5;
+
+}
+
+
+.product-main-image {
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.product-main-image:hover {
+
+    transform:
+        scale(1.05);
+
+}
+
+

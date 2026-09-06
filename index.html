@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Elegance - Jewellery Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#fffaf0] text-gray-900">
+
+  <!-- Logo and Business Name -->
+  <header class="bg-white py-10 shadow">
+    <div class="flex flex-col items-center">
+      <!-- Replace with your logo image -->
+      <img src="images/KJ.jpeg" alt="Kavitha Jewellers Logo" class="h-40 w-40 rounded-full object-cover shadow-lg">
+      <h1 class="mt-4 text-3xl font-bold text-yellow-800">Kavitha Jewellers</h1>
+    </div>
+  </header>
+
+  <!-- Business Description -->
+  <section class="bg-gradient-to-r from-yellow-100 via-white to-yellow-50 mt-12 shadow-inner">
+    <div class="max-w-3xl mx-auto text-center px-6 py-10">
+      <h2 class="text-2xl font-semibold text-yellow-700">Timeless Gold Jewellery</h2>
+      <p class="mt-4 text-lg text-gray-700">
+        Welcome to Kavitha Jewellers - your trusted destination for handcrafted gold jewellery. 
+        We specialize in traditional and contemporary designs including necklaces, bangles, and tops. 
+        Each piece reflects unmatched craftsmanship and lasting beauty.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+
+    <div class="text-center mb-8">
+
+        <p class="text-yellow-700 font-semibold">
+            LIVE MARKET UPDATE
+        </p>
+
+        <h2 class="text-3xl font-serif text-yellow-900">
+            Today's Gold Rate
+        </h2>
+
+        <p class="text-gray-500 mt-2">
+            Hyderabad
+        </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="gold-card">
+
+            <p>24K Gold</p>
+
+            <h3 id="gold24">
+                Loading...
+            </h3>
+
+            <span>per gram</span>
+
+        </div>
+
+
+        <div class="gold-card">
+
+            <p>22K Gold</p>
+
+            <h3 id="gold22">
+                Loading...
+            </h3>
+
+            <span>per gram</span>
+
+        </div>
+
+
+        <div class="gold-card">
+
+            <p>18K Gold</p>
+
+            <h3 id="gold18">
+                Loading...
+            </h3>
+
+            <span>per gram</span>
+
+        </div>
+
+    </div>
+
+
+    <p id="goldUpdated"
+       class="text-center text-sm text-gray-500 mt-5">
+    </p>
+
+</section>
+
+
+  <!-- Collections Section -->
+  <main class="max-w-6xl mx-auto px-6 py-14">
+    <h2 class="text-2xl font-semibold mb-8 text-yellow-700 text-center">Our Collections</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <a href="collection.html?category=necklaces"
+       class="product-card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+        <img src="images/necklace.jpeg"
+             class="w-full h-72 object-cover">
+
+        <div class="p-6 text-center">
+
+            <h3 class="text-2xl font-semibold text-yellow-800">
+                Necklaces
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                Explore Collection →
+            </p>
+
+        </div>
+
+    </a>
+
+
+    <a href="collection.html?category=bangles"
+       class="product-card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+        <img src="images/bangles.jpg"
+             class="w-full h-72 object-cover">
+
+        <div class="p-6 text-center">
+
+            <h3 class="text-2xl font-semibold text-yellow-800">
+                Bangles
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                Explore Collection →
+            </p>
+
+        </div>
+
+    </a>
+
+
+    <a href="collection.html?category=tops"
+       class="product-card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+        <img src="images/tops.jpg"
+             class="w-full h-72 object-cover">
+
+        <div class="p-6 text-center">
+
+            <h3 class="text-2xl font-semibold text-yellow-800">
+                Tops
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                Explore Collection →
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-12 p-4 text-center text-sm text-gray-500">
+    © 2025 Kavitha Jewellers. All rights reserved.
+  </footer>
+
+  <script src="js/gold-rate.js"></script>
+</body>
+</html>
